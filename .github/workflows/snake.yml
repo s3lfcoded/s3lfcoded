@@ -2,8 +2,10 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
+  repository_dispatch:
+    types: [update-snake]
   push:
     branches:
       - main
